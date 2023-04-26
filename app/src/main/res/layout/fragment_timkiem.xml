@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:iconifiedByDefault="false"
+            android:background="@drawable/rounded_edittext"
+            android:layout_margin="10dp"
+            app:queryHint="Tim kiem theo ten hoac noi dung cong viec"/>
+
+        <EditText
+            android:id="@+id/eFrom"
+            android:layout_width="match_parent"
+            android:hint="Chọn từ ngày: "
+            android:background="@drawable/rounded_edittext"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="#43000000"
+            />
+
+        <EditText
+            android:id="@+id/eTo"
+            android:layout_width="match_parent"
+            android:hint="Cho đến ngày: "
+            android:background="@drawable/rounded_edittext"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="#43000000"
+            />
+
+        <Button
+            android:id="@+id/btSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="#81C784"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="end"
+            android:text="Tìm kiếm" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="Tìm kiếm theo\ntình trạng: "
+                android:textColor="@color/item"
+                android:textSize="18dp"/>
+            <Spinner
+                android:layout_marginLeft="20dp"
+                android:id="@+id/spCategory"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
